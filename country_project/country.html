@@ -1,16 +1,28 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-     <meta-charset="utf-8">
+     <meta charset="utf-8">
      <title>Сайт</title>
      <link rel="stylesheet" href="newsite.css">
      <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
-     <script type="text/javascript">
+   <!--  <script type="text/javascript">
     YMaps.jQuery(function () {
         var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
         map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
-    })
+    });
+    window.onscroll = function(event) {
+      var elem = document.body.getElementsByClassName("totop")[0];
+      var className = elem.className;
+      var newClassName = className.replace(/ enabled$/, "");
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > window.innerHeight) {
+        elem.className = newClassName + " enabled";
+      } else {
+        elem.className = newClassName;
+      }
+    }
 </script>
+-->
 </head>
 <body>
 	<header>

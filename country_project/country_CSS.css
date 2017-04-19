@@ -135,9 +135,11 @@ footer{
   text-align: center;
   padding-top: 40px;
 }
-.enabled {
-  display: block;
+img.totop.enabled {
+    opacity: 1;
 }
+newsite.css:141
 .totop {
-  display: none;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
 }
