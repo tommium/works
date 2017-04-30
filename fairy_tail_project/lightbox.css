@@ -15,49 +15,42 @@ body.lb-disable-scrolling {
   z-index: 9999;
   background-color: #331e19;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  opacity: 0.9;
   display: block;
 }
 
 .lightbox {
   display: none;
   position: absolute;
+  left: 0;
   width: 100%;
   z-index: 10000;
-  text-align: right;
+  text-align: center;
   line-height: 0;
   font-weight: normal;
 }
 
-.lightbox img {
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+/*.lightbox img {
         float: left;
-
-      }
-      /*
-      &:hover {
-        img {
-          -webkit-transform: scale(1.05);
-          -moz-transform: scale(1.05);
-          -o-transform: scale(1.05);
-          -ms-transform: scale(1.05);
-          transform: scale(1.05);
-          z-index: 5;
-        }
-      }
-      }*/
-
+}*/
 .lb-outerContainer {
   position: relative;
-  
-  max-width: 80%;
-  height: auto;
-  float: left;
-  border: none;
-  display: block;
-
-  /* Background color behind image.
-     This is visible during transitions. 
-  background-color: white;*/
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
 .lb-outerContainer:after {
@@ -92,7 +85,7 @@ body.lb-disable-scrolling {
   height: 100%;
   width: 100%;
   z-index: 10;
-  overflow: hidden;
+/*  overflow: hidden;*/
 }
 
 .lb-container  {
@@ -147,25 +140,28 @@ body.lb-disable-scrolling {
 }
 
 .lb-dataContainer {
-  float: right;
+/*  float: right;
   position: relative;
-  width: 20%;
-  height: 100%;
-  font-family: MuseoSansBold, sans-serif;
+  width: 150px;
+  height: 100%;*/
 
-  /*-moz-border-radius-bottomleft: 4px;
+  font-family: MuseoSansBold, sans-serif;
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
   -moz-border-radius-bottomright: 4px;
   -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;*/
+  border-bottom-right-radius: 4px;
 }
 
 .lb-dataContainer:after {
   content: "";
   display: block;
-  float: right;
-  width: 150px
+  clear: both;
 }
 
 .lb-data {
@@ -196,6 +192,7 @@ body.lb-disable-scrolling {
   
   font-size: 25px;
   color: #cfc38f;
+}
 
 .lb-data .lb-close {
   display: block;

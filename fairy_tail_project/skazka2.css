@@ -1,6 +1,6 @@
 /* line 1, ../sass/demo.scss */
 html, body {
-  font-family: 'Slabo 27px', serif;
+  font-family: MuseoSansRegular, sans-serif;
   padding: 0;
   margin: 0;
   background: #ffffff;
@@ -13,7 +13,7 @@ html, body {
 
 /* line 12, ../sass/demo.scss */
 a {
-  color: #4ab19a;
+  color: #415e21;
 }
 
 /* line 16, ../sass/demo.scss */
@@ -26,20 +26,22 @@ a {
 /* line 22, ../sass/demo.scss */
 .container {
   width: 100%;
+
   margin-right: auto;
   margin-left: auto;
 }
-
-.container .gallery a {
-  width: 25%;
-}
-
 /* line 32, ../sass/demo.scss */
 .container .gallery a img {
   float: left;
   margin-right: 0;
   padding-right: 0;
+width: 25%;
+min-height: 195px;
   border: none;
+  height: auto;
+ 
+  object-fit: cover;
+  box-sizing: border-box;
   -webkit-transition: -webkit-transform .15s ease;
   -moz-transition: -moz-transform .15s ease;
   -o-transition: -o-transform .15s ease;
@@ -56,6 +58,3 @@ a {
   transform: scale(1.05);
   z-index: 5;
 }
-/* line 57, ../sass/demo.scss */
-
-/* line 65, ../sass/demo.scss */
