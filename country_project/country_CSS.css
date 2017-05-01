@@ -1,33 +1,45 @@
-@font-face {
-	font-family: OldType;
-	src: url(fonts/OldType.ttf);
-  }
+html {
+	width: 100%;
+	max-width: 1356px;
+	margin: 0;
+}
 
-html, body {
-  font-family: "OldType", sans-serif;
+body {
+  font-family: 'Podkova', serif;
   color: #a86d14;
   background-color: #fffff0;
   margin: 0;
+  margin-top: 0;
+  width: 100%;
   padding: 0;
 }
+
 .main-head {
   background-image: url(img/boots.jpg);
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  text-align: right;
 }
+
+span{
+  top: 99px;
+  font-size: 36px;
+  font-family: 'Podkova', serif;
+  color: #a86d14;
+  text-shadow: 2px 2px #583c08, 2px 2px #583c08;
+  right: 100px;
+  position: absolute;
+}
+
 .logo{
   height: 300px;
-  margin-top: 150px;
-  margin-left: 800px;
+  right: 100px;
+  padding-top: 15%;
+  position: relative;
 }
-span{
-  padding-left: 700px;
-  margin-top: 70px;
-  font-size: 30px;
-  font-family: "OldType", sans-serif;
-  color: #a86d14;
- 
-}
+
 .navbar{
   margin: 20px;
   text-align: center;
@@ -48,6 +60,10 @@ span{
   color: #967117;
 }
 
+a {
+  transition-timing-function: ease-out;
+}
+
 hr{
   border: none;
   background-color: #a86d14;
@@ -60,12 +76,15 @@ hr{
 h1{
   text-align: center;
 }
+
 p{
   padding: 5px 90px 30px 90px;
 }
 .foto{
-  width: 510px;
-  height: 250px;
+  max-width: 510px;
+  max-height: 250px;
+  width: 100%;
+  height: auto;
   float: right;
   margin: 5px;
 }
@@ -74,52 +93,108 @@ p{
   margin-left: 100px;
 }
 table{
-  margin-left: 250px;
+  margin-left: 23%;
 }
-.about{
-  width: 250px;
-  height: 250px;
+
+.about {
+  text-shadow: 1px 1px white, 1px 1px #D7CC88;
 }
+
+.aboutImg{
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.aboutImg img {
+	padding-top: 20px;
+	max-height: 20%;
+}
+
 h2{
   text-align: left;
   margin-bottom: -10px;
 }
-.price{
-  height: 250px;
-  padding: 40px;
-}
-.okno{
-  background-image: url(img/иппо3.jpg);
-  width: 400px;
-  display: none;
-}
-.okno:target{
-  display: block;
+
+.price {
+  max-height: 250px;
+  margin: 40px 60px;
+  object-fit: contain;
+  position: relative;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-
-.leftstr, .rightstr{
-  float: left;
+.price img {
+	width: 21%;
+	height: auto;
+	object-fit: cover;
 }
 
+#tooltip {
+	z-index: 9999;
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	width: 500px;
+	box-sizing: ;
+}
+
+.wrapper {
+	
+	position: relative;
+	width: 80%;
+	max-width: 800px;
+	padding-left: 16%;
+	
+}
+
+.leftstr {
+	width: 35%;
+	height: auto;
+	float: left;
+	text-align: left;
+}
 .rightstr{
+	width: 35%;
+	height: auto;
+  float: right;
   text-align: right;
-  margin-left: 300px;
 }
-a{
+
+.rightstr a{
   color: #967117;
   text-decoration: none;
 }
+
+
+.icons {
+	position: absolute;
+	left: 45%;
+	margin-bottom: 20px;
+}
+
 .icon1{
   width: 50px;
   height: 50px;
-  margin-left: 590px;
+  margin-top: 30px;
 }
 .icon2{
   width: 80px;
   height: 50px;
   margin-left: 30px;
+  margin-top: 30px;
 }
+
+.map {
+  width: 90%;
+  height: auto;
+  margin-top: 80px;
+  padding-top: 20px;
+  left: 60px;
+  position: relative;
+}
+
 .totop{
   position: fixed;
   bottom: 5%;
@@ -138,7 +213,7 @@ footer{
 img.totop.enabled {
     opacity: 1;
 }
-newsite.css:141
+
 .totop {
     opacity: 0;
     transition: opacity 300ms ease-in-out;
