@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Log in</title>
+        <link rel="stylesheet" type="text/css" href="dani.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <body>
+        <form>
+        <h1>
+            Enter your name:
+        </h1>
+        <input id="login" type="text" name="login">
+        <h1>
+	        Enter your password:
+        </h1>
+        <input id="pass" type="password" name="password">
+        <br>
+        <input class="button" type="submit" value="Sign in" id="button" onclick="validate()">
+    </form>
+
+<script>
+
+	function validate(){
+
+		var log = new Array("login", "admin");
+		var pass = new Array("pass", "admin");
+		var login_ok = false;
+		var user_name;
+		var password;
+
+		user_name = document.getElementById("login").value;
+	    password = document.getElementById("pass").value;
+
+	    for(var i = 0; i < log.length; i++){
+	    		if(user_name == log[i] && password == pass[i]){
+	    			login_ok = true;
+	    		} 
+	    }	
+		if(login_ok){
+			alert("Hello, " + user_name);
+		} else {
+			alert("Invalid login or password");
+		}
+ }
+</script>
+</body>
+</html>
